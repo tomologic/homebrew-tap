@@ -1,14 +1,14 @@
 class Wrench < Formula
   desc 'Wrench build / test util'
   homepage 'https://github.com/tomologic/wrench'
-  version '0.38.0'
+  version '0.40.0'
 
   if OS.mac?
     os = 'darwin'
-    sha256 'a6c379be3cc4d17f40c06708496e5378477bc3d9b671211e51fa631dc17163c8'
+    sha256 '0533881b54c204e1fe196da5267483d19c66133b8a993116350548e42683f51b'
   elsif OS.linux?
     os = 'linux'
-    sha256 '78e5b09a247554baf245eb723672b016efd9346f3ce5e329564d408634a2dbf6'
+    sha256 '620b5b3b58d708f07253f4d693853684215c2b0db3891c2575c67218cc69841f'
   end
 
   url "https://github.com/tomologic/wrench/releases/download/v#{version}/wrench-#{version}-#{os}-amd64"
