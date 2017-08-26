@@ -23,6 +23,6 @@ class Wrench < Formula
     mv Dir.glob("wrench-*-amd64").first, 'wrench'
     bin.install 'wrench'
 
-    resource('bash-completion').stage { bash_completion.install 'contrib/wrench-completion.bash' }
+    bash_completion.install resource('bash-completion')
   end
 end
