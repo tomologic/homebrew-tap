@@ -14,10 +14,15 @@ class Wrench < Formula
 
   url "https://github.com/tomologic/wrench/releases/download/v#{version}/wrench-#{version}-#{os}-amd64"
 
+  resource 'bash-completion' do
+    url 'https://raw.githubusercontent.com/tomologic/wrench/master/contrib/wrench-completion.bash'
+    sha256 '87aa69b963c42ff480c5844f7becf657917e5f8af8b171978cb32c1f0e5f2e08'
+  end
+
   def install
     mv Dir.glob("wrench-*-amd64").first, 'wrench'
     bin.install 'wrench'
 
-    bash_completion.install "contrib/wrench-completion.bash"
+    resource('bash-completion').stage { bash_completion.install 'contrib/wrench-completion.bash' }
   end
 end
