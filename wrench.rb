@@ -1,8 +1,8 @@
 class Wrench < Formula
   desc 'Wrench build and test utility'
   homepage 'https://github.com/tomologic/wrench'
-  version '0.43.0'
   head 'git@github.com:tomologic/wrench.git'
+  version '0.43.0'
 
   if OS.mac?
     os = 'darwin'
